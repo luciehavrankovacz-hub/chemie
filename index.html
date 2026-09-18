@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chemie – skupiny I.A a II.A</title>
+<style>
+  :root{--bg:#0c1a20;--panel:#14262e;--teal:#3fd0c0;--ora:#f0923a;--grn:#7ac04a;--blue:#5aa8f0;--viol:#b08aff;--ink:#e6f1ee;--muted:#9fbdb6}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(ellipse at top,#16333c,var(--bg) 60%);color:var(--ink);font-family:'Segoe UI',Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px 16px 60px}
+  header{text-align:center;margin-bottom:16px}
+  h1{font-size:clamp(28px,5.5vw,52px);margin:4px 0 0;color:#fff;letter-spacing:1px}
+  h1 span{color:var(--teal)}
+  .sub{color:var(--muted);font-size:clamp(15px,2.4vw,19px)}
+  .icons{font-size:clamp(26px,5vw,40px);letter-spacing:8px}
+  .player{background:#000;border:3px solid var(--teal);border-radius:12px;overflow:hidden;box-shadow:0 10px 40px #000a}
+  video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+  .tip{color:var(--muted);text-align:center;margin:8px 0 0;font-size:15px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .box{background:var(--panel);border:2px solid #24414c;border-radius:12px;padding:16px 18px}
+  .box h2{margin:0 0 10px;color:var(--teal);font-size:22px}
+  .box.ora h2{color:var(--ora)} .box.grn h2{color:var(--grn)} .box.blue h2{color:var(--blue)} .box.viol h2{color:var(--viol)}
+  .chap{display:flex;gap:10px;align-items:baseline;width:100%;text-align:left;font:inherit;font-size:17px;color:var(--ink);background:none;border:0;border-bottom:1px solid #24414c;padding:9px 4px;cursor:pointer}
+  .chap:hover{background:#1b3640}
+  .chap.now{background:#23444f;color:#fff}
+  .chap b{color:var(--teal);min-width:56px;font-variant-numeric:tabular-nums}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  td{padding:6px;border-bottom:1px solid #24414c;vertical-align:top}
+  td:first-child{color:var(--teal);font-weight:bold;white-space:nowrap}
+  .ora td:first-child{color:var(--ora)} .grn td:first-child{color:var(--grn)} .blue td:first-child{color:var(--blue)} .viol td:first-child{color:var(--viol)}
+  .full{grid-column:1/-1}
+  .tiles{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .t{border-radius:8px;padding:6px 10px;font-weight:900;color:#16211a;min-width:64px;text-align:center}
+  .t small{display:block;font-weight:600;font-size:11px;opacity:.8}
+  .t1{background:var(--ora)} .t2{background:var(--grn)}
+  .mnem{background:#1b3640;border-left:4px solid var(--ora);padding:10px 14px;border-radius:8px;margin-top:8px;font-size:16px}
+  footer{text-align:center;color:var(--muted);margin-top:28px;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="icons">🧪⚛️🔬</div>
+    <h1>Chemie – <span>skupiny I.A a II.A</span></h1>
+    <div class="sub">co je chemie · obory · periodická tabulka · zkoušení · průvodce Atomík · 17 minut</div>
+  </header>
+
+  <div class="player"><video id="v" src="https://github.com/luciehavrankovacz-hub/chemie-ia-iia/releases/download/v1/chemie_ia_iia.mp4" controls preload="metadata" playsinline></video></div>
+  <p class="tip">📱 Na mobilu otoč telefon na šířku a dej celou obrazovku ⛶ · při zkoušení máš na každou otázku 5 vteřin</p>
+
+  <div class="grid">
+    <div class="box">
+      <h2>🎬 Kapitoly (klikni a video skočí)</h2>
+      <div id="chapters"></div>
+    </div>
+
+    <div class="box blue">
+      <h2>📘 Zápis do sešitu</h2>
+      <table class="blue">
+        <tr><td>CHEMIE</td><td>přírodní věda, která zkoumá <b>složení</b>, <b>vlastnosti</b> a <b>přeměny</b> látek</td></tr>
+        <tr><td>látka</td><td>z čeho to je – sklo, železo, voda</td></tr>
+        <tr><td>těleso</td><td>ten konkrétní předmět – sklenice, hřebík</td></tr>
+      </table>
+    </div>
+
+    <div class="box viol">
+      <h2>🔭 Obory chemie</h2>
+      <table class="viol">
+        <tr><td>obecná</td><td>pojmy a zákony – atom, molekula, prvek, sloučenina</td></tr>
+        <tr><td>anorganická</td><td>látky z neživé přírody – kovy, kyseliny, soli</td></tr>
+        <tr><td>organická</td><td>sloučeniny uhlíku – plasty, paliva, cukry, léky</td></tr>
+        <tr><td>fyzikální</td><td>chemie + fyzika – rychlost reakce, teplo, tlak</td></tr>
+        <tr><td>biochemie</td><td>živé organismy – bílkoviny, tuky, cukry, DNA</td></tr>
+      </table>
+    </div>
+
+    <div class="box ora">
+      <h2>🟠 I.A – alkalické kovy</h2>
+      <div class="tiles">
+        <div class="t t1">H<small>1</small></div><div class="t t1">Li<small>3</small></div><div class="t t1">Na<small>11</small></div>
+        <div class="t t1">K<small>19</small></div><div class="t t1">Rb<small>37</small></div><div class="t t1">Cs<small>55</small></div><div class="t t1">Fr<small>87</small></div>
+      </div>
+      <table class="ora" style="margin-top:10px">
+        <tr><td>elektrony</td><td>1 v poslední vrstvě → hodně reaktivní</td></tr>
+        <tr><td>vlastnosti</td><td>měkké, prudce reagují s vodou, skladují se v oleji</td></tr>
+        <tr><td>pozor</td><td><b>vodík není kov</b> – je to nejlehčí plyn</td></tr>
+      </table>
+      <div class="mnem"><b>Hravé Lišky Nesou Klacík Rychle Ceremoniálně Fanfárou</b></div>
+    </div>
+
+    <div class="box grn">
+      <h2>🟢 II.A – kovy alkalických zemin</h2>
+      <div class="tiles">
+        <div class="t t2">Be<small>4</small></div><div class="t t2">Mg<small>12</small></div><div class="t t2">Ca<small>20</small></div>
+        <div class="t t2">Sr<small>38</small></div><div class="t t2">Ba<small>56</small></div><div class="t t2">Ra<small>88</small></div>
+      </div>
+      <table class="grn" style="margin-top:10px">
+        <tr><td>elektrony</td><td>2 v poslední vrstvě → méně reaktivní</td></tr>
+        <tr><td>vlastnosti</td><td>tvrdší, vyšší teplota tání, s vodou reagují klidněji</td></tr>
+        <tr><td>kde jsou</td><td>Mg hoří bíle · Ca v kostech a vápenci · Ra radioaktivní</td></tr>
+      </table>
+      <div class="mnem"><b>Běžela Malá Cecilka Se Bílým Ručníkem</b></div>
+    </div>
+
+    <div class="box full">
+      <h2>🔢 Políčko prvku v tabulce</h2>
+      <table>
+        <tr><td>vlevo nahoře</td><td>protonové číslo = kolik protonů (a elektronů) má atom</td></tr>
+        <tr><td>velké písmeno</td><td>značka prvku – podle latinského názvu (Natrium → Na, Kalium → K)</td></tr>
+        <tr><td>pod tím</td><td>český a latinský název</td></tr>
+        <tr><td>dole</td><td>relativní atomová hmotnost = jak je atom těžký</td></tr>
+        <tr><td>malé číslo</td><td>elektronegativita = jak si prvek přitahuje elektrony</td></tr>
+        <tr><td>tabulka</td><td>svislý sloupec = <b>skupina</b> · vodorovný řádek = <b>perioda</b></td></tr>
+      </table>
+    </div>
+  </div>
+  <footer>Vyrobeno s pomocí AI (Claude). Obrázky, hudba i hlas jsou vytvořené počítačem. ⚛️</footer>
+</div>
+
+<script>
+const CHAPTERS = [[0, 'Úvod – co se naučíme'], [39, '1. Co je chemie (zápis do sešitu)'], [114, '2. Obory chemie'], [227, '3. Periodická tabulka'], [329, '4. Skupina I.A – alkalické kovy'], [487, '5. Skupina II.A – kovy alk. zemin'], [644, '6. Zkoušení – 19 otázek po 5 vteřinách']];
+const v = document.getElementById('v');
+const zvukZap = () => { v.muted = false; v.defaultMuted = false; v.removeAttribute('muted'); if (v.volume < 0.05) v.volume = 1; };
+zvukZap();
+v.addEventListener('loadedmetadata', zvukZap);
+v.addEventListener('play', zvukZap);
+const fmt = s => Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+const box = document.getElementById('chapters');
+CHAPTERS.forEach(([t, name]) => {
+  const b = document.createElement('button'); b.className = 'chap'; b.dataset.t = t;
+  b.innerHTML = '<b>' + fmt(t) + '</b><span>' + name + '</span>';
+  b.onclick = () => {
+    const go = () => { zvukZap(); v.currentTime = t; v.play().catch(() => {}); };
+    if (v.readyState >= 1) go(); else { v.addEventListener('loadedmetadata', go, { once: true }); v.load(); }
+    v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+  box.appendChild(b);
+});
+v.addEventListener('timeupdate', () => {
+  let cur = null; document.querySelectorAll('.chap').forEach(b => { b.classList.remove('now'); if (+b.dataset.t <= v.currentTime) cur = b; });
+  if (cur) cur.classList.add('now');
+});
+</script>
+</body>
+</html>
