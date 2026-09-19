@@ -4,6 +4,6 @@ Vyukove video: co je chemie, obory chemie, periodicka tabulka a skupiny I.A (alk
 a II.A (kovy alkalickych zemin). Na konci zkouseni - jedna otazka, pet vterin, pak odpoved.
 Pruvodce Atomik. 17 minut.
 
-Pustit video: https://luciehavrankovacz-hub.github.io/chemie-ia-iia/
+Pustit video: https://luciehavrankovacz-hub.github.io/chemie/
 
 Vyrobeno s pomoci AI (Claude). Obrazky, hudba i hlas jsou vytvorene pocitacem.
